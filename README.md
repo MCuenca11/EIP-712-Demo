@@ -1,57 +1,19 @@
-# Sample Hardhat 3 Beta Project (`mocha` and `ethers`)
+# EIP-712 Demo Project
 
-This project showcases a Hardhat 3 Beta project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+This project demonstrates the implementation of **EIP-712 Typed Data Encoding and Signature Verification**. It showcases how to encode typed data, generate signatures, and verify them both off-chain and on-chain. Additionally, it includes an example of verifying the signature in a relayed function on a smart contract.
 
-To learn more about the Hardhat 3 Beta, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3 Beta](https://hardhat.org/hardhat3-beta-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+## Features
 
-## Project Overview
+- **EIP-712 Typed Data Encoding**: Encode structured data according to the EIP-712 standard.
+- **Signature Generation**: Generate cryptographic signatures for the encoded data.
+- **On-Chain Verification**: Verify the signature in a smart contract.
+- **Relayed Function Execution**: Demonstrates how a relayed function can validate the signature before executing logic.
 
-This example project includes:
+## Prerequisites
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using `mocha` and ethers.js
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+To run this project, ensure you have the following installed:
 
-## Usage
-
-### Running Tests
-
-To run all the tests in the project, execute the following command:
-
-```shell
-npx hardhat test
-```
-
-You can also selectively run the Solidity or `mocha` tests:
-
-```shell
-npx hardhat test solidity
-npx hardhat test mocha
-```
-
-### Make a deployment to Sepolia
-
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
-
-To run the deployment to a local chain:
-
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
-```
-
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
-
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
-
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
-
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-```
-
-After setting the variable, you can run the deployment with the Sepolia network:
-
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
-```
+- [Node.js](https://nodejs.org/) (v16 or later)
+- [Hardhat](https://hardhat.org/) (for smart contract development)
+- [Java](https://www.oracle.com/java/) (for backend integration, if applicable)
+- A package manager like `npm` or `yarn`
